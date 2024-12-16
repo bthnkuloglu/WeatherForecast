@@ -9,7 +9,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const apiKey = '4e7d9e1a27615b7148c274094c67b514'; 
+  const apiKey = '4e7d9e1a27615b7148c274094c67b514';
 
   const handleSearch = async () => {
     // Clear previous error 
@@ -145,12 +145,15 @@ function App() {
             <div className="forecast-grid">
               {forecastData.map((item, index) => (
                 <div key={index} className="forecast-day">
+
                   <span className="forecast-day-name">{getDayName(item.dt_txt)}</span>
+
+                  <span className="forecast-temp">{Math.round(item.main.temp)}°C</span>
                   <img
                     src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
                     alt={item.weather[0].description}
                   />
-                  <span className="forecast-temp">{Math.round(item.main.temp)}°C</span>
+
                 </div>
               ))}
             </div>
