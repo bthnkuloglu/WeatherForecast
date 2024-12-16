@@ -9,17 +9,17 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const apiKey = '4e7d9e1a27615b7148c274094c67b514'; // Buraya kendi OpenWeatherMap API anahtarınızı koyun
+  const apiKey = '4e7d9e1a27615b7148c274094c67b514'; 
 
   const handleSearch = async () => {
-    // Önceki hatayı temizle
+    // Clear previous error 
     setError('');
-    // Veri önceden varsa temizle
+    // If there is already data, clear it.
     setWeatherData(null);
     setForecastData(null);
     setExpanded(false);
 
-    // Eğer city boş ise error set et
+    // If "city" is empty, get error.
     if (!city.trim()) {
       setError('Şehir adı girin');
       return;
@@ -28,7 +28,7 @@ function App() {
     setLoading(true);
 
     try {
-      // 1) Anlık hava durumunu al
+      // 1) Get current weather data 
       const currentResponse = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=tr`);
 
       if (!currentResponse.ok) {
@@ -38,7 +38,7 @@ function App() {
       const currentData = await currentResponse.json();
       setWeatherData(currentData);
 
-      // 2) 5 günlük/3 saatlik tahmin verilerini al
+      // 2) Get a 3 hours/5day weather Data
       const forecastResponse = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric&lang=tr`);
       if (!forecastResponse.ok) {
         throw new Error('Tahmin verileri alınırken hata oluştu');
@@ -46,7 +46,7 @@ function App() {
 
       const forecastFullData = await forecastResponse.json();
 
-      // 3) Sonraki 4 güne ait verileri çıkart
+      // 3) Extract next 4 days data.
       const nextFourDays = extractNextFourDays(forecastFullData.list);
       setForecastData(nextFourDays);
 
@@ -124,7 +124,7 @@ function App() {
         {!loading && expanded && weatherData && (
           <div className="weather-result">
             <div className="weather-info">
-              <h3>{weatherData.name}</h3>
+              <h2>{weatherData.name}</h2>
               <p>Sıcaklık: {weatherData.main.temp}°C</p>
               <p>Nem: {weatherData.main.humidity}%</p>
               <p>Durum: {weatherData.weather[0].description}</p>

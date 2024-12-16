@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Weather Forecast
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Turkish 🇹🇷
 
-## Available Scripts
+Bu proje, React ile geliştirilmiş bir hava durumu uygulamasıdır. Kullanıcı bir şehir adı girerek anlık hava durumunu görüntüleyebilir. Ayrıca, uygulama OpenWeatherMap API üzerinden sonraki 4 güne ait tahmin verilerini de gösterir.
 
-In the project directory, you can run:
+### Features
 
-### `npm start`
+- Belirtilen şehir için anlık sıcaklık, nem, durum bilgisi ve hava durumu ikonu gösterilir.
+- Sonraki 4 güne ait tahminler (gün adı, ikon, tahmini sıcaklık) yatay bir sıra halinde görüntülenir.
+- Arama kutusuna girilen şehir ismi Enter tuşuna basılarak veya Ara butonuna tıklanarak sorgulanabilir.
+- Boş arama yapılması durumunda uyarı mesajı gösterilir.
+- Veri çekilirken "Loading..." durumu gösterilir ve veri geldikten sonra kaldırılır.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Kullanılan Teknolojiler
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **React:** Uygulama arayüzü için.
+- **OpenWeatherMap API:** Hava durumu verilerini elde etmek için.
+- **CSS:** Basit stillendirme ve düzenlemeler için.
 
-### `npm test`
+<hr>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## English 🇬🇧
 
-### `npm run build`
+This project is a weather application built with React. Users can enter a city name to view the current weather conditions. Additionally, the application retrieves forecast data for the next 4 days from the OpenWeatherMap API.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Displays current temperature, humidity, weather condition, and an icon for the specified city.
+- Shows a 4-day forecast (day name, icon, temperature) in a horizontal layout.
+- Users can search by pressing the Enter key or clicking the search button.
+- If the search input is empty, an error message is displayed.
+- A "Loading..." state is shown while fetching data, and removed once data arrives.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Technologies Used
 
-### `npm run eject`
+- **React:** For building the user interface.
+- **OpenWeatherMap API:** To fetch current weather and forecast data.
+- **CSS:** For simple styling and layout adjustments.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Installation and Running
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Clone the repository:**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   git clone https://github.com/bthnkuloglu/weatherforecast.git
+   cd project_name
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2. **Install dependencies:**
 
-## Learn More
+   ```bash
+   npm install
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+3. **Run the application:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   npm start
+   ```
+   
+   Open `http://localhost:3000` in your browser to view the app.
