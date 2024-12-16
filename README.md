@@ -60,3 +60,11 @@ This project is a weather application built with React. Users can enter a city n
    ```
    
    Open `http://localhost:3000` in your browser to view the app.
+   
+   <hr> 
+
+   # LIVE DEMO
+
+   ### https://weatherforecast-bk.netlify.app
+
+   
