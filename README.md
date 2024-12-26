@@ -4,7 +4,7 @@
 
 Bu proje, React ile geliştirilmiş bir hava durumu uygulamasıdır. Kullanıcı bir şehir adı girerek anlık hava durumunu görüntüleyebilir. Ayrıca, uygulama OpenWeatherMap API üzerinden sonraki 4 güne ait tahmin verilerini de gösterir.
 
-### Features
+### Özellikler
 
 - Belirtilen şehir için anlık sıcaklık, nem, durum bilgisi ve hava durumu ikonu gösterilir.
 - Sonraki 4 güne ait tahminler (gün adı, ikon, tahmini sıcaklık) yatay bir sıra halinde görüntülenir.
